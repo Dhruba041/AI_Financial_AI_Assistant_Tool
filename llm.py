@@ -1,5 +1,5 @@
 from langchain_ollama import ChatOllama
-from langchain_google_genai import ChatGoogleGenerativeAI
+#from langchain_google_genai import ChatGoogleGenerativeAI #commented as not used in streamlit cloud and not API key not kept in secrets
 from dotenv import load_dotenv
 load_dotenv()
 import os
@@ -17,12 +17,13 @@ llama_llm = ChatOllama(
     temperature=0
 )
 
-gemini_llm = ChatGoogleGenerativeAI(
-    model="gemini-3.8-flash"#, #Had to switch as usage limit was reached for gemini-3.8-flash model, so using gemini-3.7-flash model for now
+#Commenting gemini model. 
+#gemini_llm = ChatGoogleGenerativeAI(
+#    model="gemini-3.8-flash"#, #Had to switch as usage limit was reached for gemini-3.8-flash model, so using gemini-3.7-flash model for now
     #model="gemini-3.7-flash", #Switching again for question 4
     #model="Gemini 3.1 Flash-Lite",
     #api_key=os.getenv("GOOGLE_API_KEY") 
-)
+#)
 
 gpt_llm = ChatOpenAI(
     model_name="gpt-4o-mini", 
