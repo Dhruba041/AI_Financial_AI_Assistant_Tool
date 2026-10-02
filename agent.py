@@ -10,7 +10,7 @@ from tools import(
     budget_planner_tool
 )
 
-from llm import finance_llm, gemini_llm, llama_llm, gpt_llm
+from llm import finance_llm, llama_llm, gpt_llm #gemini_llm, 
 
 def create_finance_ai_agent():
     tools = [calculator_tool,
@@ -100,7 +100,9 @@ def create_finance_ai_agent():
     )
     return agent
 
-#Agent using Gemini LLM
+"""
+
+#Agent using Gemini LLM - commenting
 def create_finance_gemini_agent():
     tools = [calculator_tool,
             emi_calculator_tool,
@@ -191,6 +193,10 @@ def create_finance_gemini_agent():
     )
 
     return agent
+
+
+"""
+
 
 #Agent Using Llama LLM
 
